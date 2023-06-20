@@ -21,7 +21,7 @@ export default function Home() {
       ></Image>
       <h1
         style={{ textShadow: "5px 5px 10px #000000" }}
-        className="md:text-8xl text-6xl flex justify-center w-full font-bold"
+        className="md:text-8xl text-3xl flex justify-center w-full font-bold"
       >
         Congratulations <span className="mx-6 text-pink-600">{name}</span> ,
       </h1>
