@@ -6,10 +6,10 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import party from "@/app/party.jpg";
 export default function Home() {
-  const [name, setName] = useState("Jash agrawal");
-  // useEffect(() => {
-  //   setName(auth.currentUser?.displayName);
-  // }, []);
+  const [name, setName] = useState("Rohit MC");
+  useEffect(() => {
+    setName(auth.currentUser?.displayName);
+  }, []);
   return (
     <div className="w-screen h-screen flex flex-col space-y-8 justify-center items-center relative">
       <Image
