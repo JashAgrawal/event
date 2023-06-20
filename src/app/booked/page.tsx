@@ -6,12 +6,12 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import party from "@/app/party.jpg";
 export default function Home() {
-  const [name, setName] = useState("");
-  useEffect(() => {
-    setName(auth.currentUser?.displayName);
-  }, []);
+  const [name, setName] = useState("Jash agrawal");
+  // useEffect(() => {
+  //   setName(auth.currentUser?.displayName);
+  // }, []);
   return (
-    <div className="w-full h-full flex flex-col space-y-12 justify-center items-center relative">
+    <div className="w-screen h-screen flex flex-col space-y-8 justify-center items-center relative">
       <Image
         src={party}
         width={10000}
@@ -21,11 +21,18 @@ export default function Home() {
       ></Image>
       <h1
         style={{ textShadow: "5px 5px 10px #000000" }}
-        className="md:text-8xl text-3xl flex justify-center w-full font-bold"
+        className="md:text-8xl text-3xl flex justify-center w-full font-semibold"
       >
-        Congratulations <span className="mx-6 text-pink-600">{name}</span> ,
+        Congratulations ,
+        <br />
       </h1>
-      <h3 className="md:text-5xl text-3xl w-full text-center">
+      <span
+        style={{ textShadow: "2px 2px 10px #000000" }}
+        className="mx-6 text-4xl font-bold text-pink-600"
+      >
+        {"" + name}
+      </span>{" "}
+      <h3 className="md:text-5xl text-2xl w-full text-center">
         Your slot has been booked 🍾
       </h3>
     </div>
