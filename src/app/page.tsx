@@ -5,6 +5,7 @@ import { googleSignIn } from "@/services/firebase";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { toast } from "react-hot-toast";
+import party from "@/app/party.jpg";
 export default function Home() {
   const { isLogin, Login, Logout } = useUser();
   const router = useRouter();
@@ -17,7 +18,7 @@ export default function Home() {
     } catch (err) {
       console.log(err);
       alert(err);
-      // router.push("/");
+      router.push("/");
     }
   };
   const handleClick = async () => {
@@ -30,9 +31,9 @@ export default function Home() {
   return (
     <div className="w-screen h-screen flex flex-col space-y-12 justify-center items-center relative">
       <Image
-        src={"/party.jpg"}
-        width={1000}
-        height={1000}
+        src={party}
+        // width={1000}
+        // height={1000}
         className="w-full h-full absolute top-0 left-0 -z-20 opacity-80"
         alt="party"
       ></Image>
@@ -44,7 +45,7 @@ export default function Home() {
       </h1>
       <botton
         onClick={handleClick}
-        class="flex items-center justify-center gap-2 rounded-xl border-4 border-black bg-pink-600 px-8 py-4 font-bold shadow-[6px_6px_0_0_#000] transition hover:shadow-none focus:outline-none focus:ring text-black active:bg-pink-50"
+        className="flex items-center justify-center gap-2 rounded-xl border-4 border-black bg-pink-600 px-8 py-4 font-bold shadow-[6px_6px_0_0_#000] transition hover:shadow-none focus:outline-none focus:ring text-black active:bg-pink-50"
         href="/booked"
       >
         Book Now
