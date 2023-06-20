@@ -11,7 +11,7 @@ export default function Home() {
     setName(auth.currentUser?.displayName);
   }, []);
   return (
-    <div className="w-screen overflow-hidden h-screen flex flex-col space-y-12 justify-center items-center relative">
+    <div className="w-full h-full flex flex-col space-y-12 justify-center items-center relative">
       <Image
         src={party}
         width={10000}
